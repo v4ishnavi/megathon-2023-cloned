@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+    
+        .header-box {
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .header-box h1 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            color: #ffa550;
+        }
+    
+        .header-box h2 {
+            font-size: 24px;
+            color: #000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    
+        .result-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        .result-text {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    
+        .yes {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    
+        .no {
+            color: #F44336;
+            font-weight: bold;
+        }
+    
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .contact-number {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+
+
+<body>
+    <div class="header-box">
+        <h1>ONLINE PROCUREMENT MANAGEMENT SYSTEM (OPSM) </h1>
+        <h2>Government of Telangana</h2>
+    </div>
+    
+    <div class="result-box">
+        <h2>Result </h2>
+
+        {% if result == 'Unhealthy' %}
+            <p class="result-text no">It's UNHEALTHY and your token has been REJECTED</p>
+            <p class = "contact-number">CONTACT : 63697 - 14945</p>
+        {% elif result == 'Healthy' %}
+            <p class="result-text yes">It's HEALTHY and click below to get your token</p>
+            <a class="btn" href="token.html">Get Token</a><br><br>
+        {% endif %}
+        
+        <div class="btn-group">
+            <a class="btn" href="/">Go Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE PROCUREMENT MANAGEMENT SYSTEM - Government of Telangana</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #fdfbfb;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .header-box {
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .header-box img {
+            max-width: 100px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .header-box h1,
+        .header-box h2 {
+            font-family: 'Helvetica', sans-serif;
+            color: #fff;
+        }
+
+        .header-box h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            color: #ffa550
+        }
+
+        .header-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 600px; /* Adjusted max-width for better layout */
+            margin: 60px auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Aligned text to the left */
+        }
+
+        label {
+            display: inline-block;
+            width: 100px; /* Adjusted label width */
+            font-size: 16px;
+            color: #333;
+            font-weight: bold; /* Added bold font-weight */
+            margin-bottom: 5px; /* Added margin for spacing */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 120px); /* Adjusted input width */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            width: calc(100% - 120px); /* Adjusted input width */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .center-text {
+            text-align: center; /* Center text */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header-box">
+        <h1>ONLINE PROCUREMENT MANAGEMENT SYSTEM (OPMS) </h1>
+        <h2>Government of Telangana</h2>
+    </div>
+    <div class="form-container">
+        <h2 class="center-text">LOGIN CREDENTIALS</h2> <!-- Centered label -->
+        <form action="/process_image" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="place">Region:</label>
+            <input type="text" name="place" required>
+
+            <label for="age">Aadhar ID:</label>
+            <input type="number" name="age" required>
+
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" accept="image/*" required>
+
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+
+</html>

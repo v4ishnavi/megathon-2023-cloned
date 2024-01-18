@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 32px; /* Increase font size */
+            margin-bottom: 30px; /* Increase margin */
+        }
+
+        .token-box {
+            max-width: 800px; /* Increase max-width */
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px; /* Increase border radius */
+            padding: 30px; /* Increase padding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhance box shadow */
+        }
+
+        .token-text {
+            font-size: 18px;
+            margin-top: 20px; /* Increase margin */
+            text-align: left;
+            color: #333;
+        }
+
+        .approved {
+            color: green;
+            font-weight: bold;
+        }
+        .token-number {
+            font-weight: bold;
+        }
+
+        .issued-on,
+        .valid-till {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="token-box">
+        <h2>TOKEN OF APPRECIATION</h2>
+
+        <p class="token-number" id="tokenNumber"></p>
+        <p class="issued-on" id="datetime"></p>
+        <p class="token-text">
+            This is to certify that the Government of Telangana has <span class="approved">APPROVED</span> the request.  <br><br>
+            The harvest is above the standard quality and the crop is set and healthy to enter the market .<br>
+        </p>
+        
+        <p class="valid-till" id="validTill"></p>
+    </div>
+
+    <script>
+        // Function to generate a random 10-digit number
+        function generateRandomNumber() {
+            return Math.floor(1000000000 + Math.random() * 9000000000);
+        }
+
+        // Display the generated number
+        var tokenNumber = generateRandomNumber();
+        document.getElementById("tokenNumber").innerHTML = "TOKEN NUMBER: " + tokenNumber;
+    </script>
+
+    <script>
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        document.getElementById("datetime").innerHTML = "Issued on: " + dateTime;
+
+        // var validTill = new Date(today);
+        // validTill.setDate(today.getDate() + 14); // Add 14 days to the current date
+        // var validTillDate = validTill.getFullYear()+'-'+(validTill.getMonth()+1)+'-'+validTill.getDate();
+        // document.getElementById("validTill").innerHTML = "Valid Till: " + validTillDate;
+    </script>
+</body>
+
+</html>
